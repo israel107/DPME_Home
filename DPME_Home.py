@@ -176,7 +176,7 @@ with valeur2:
 # MISE A JOUR DES DONNEES : MERGE PRECÉDENTES ET NOUVELLES DONNÉES
 # -----------------------------------------------------------------------------------------------------------------------------------
 
-st.markdown('#### MISE A JOUR DES DONNEES DU CREDIT OCTROYE PAR LES BANQUE AUX PME')
+st.markdown('#### MISE A JOUR DES DONNEES')
 
 tab_1_data, tab_2_data = st.columns(2, gap='small')
 
