@@ -33,9 +33,22 @@ def load_data(path):
 def load_csv(path):
     return pd.read_csv(path)
     
+FICHIER_INITIAL = (
+    "./Extraction Tableau/excel/UEMOA/"
+    "situation financiere_data_2019.xlsx"
+)
 
-#C:\Users\ckoupoh\Documents\FISEC-DPME\Extraction Tableau
-df_2019 = load_data('./Extraction Tableau/excel/UEMOA/situation financiere_data_2019.xlsx')
+FICHIER_CUMULATIF = "./data/situation_financiere.xlsx"
+
+# Créer le dossier s'il n'existe pas
+os.makedirs("./unique", exist_ok=True)
+
+# Charger le fichier cumulatif s'il existe,
+# sinon charger le fichier initial
+if os.path.exists(FICHIER_CUMULATIF):
+    df_2019 = load_data(FICHIER_CUMULATIF)
+else:
+    df_2019 = load_data(FICHIER_INITIAL)
 df_2019["New_Arrete"] = pd.to_datetime( df_2019["Arrete"], dayfirst=True, errors="coerce")
 
 # df_2020 = load_data("C:/Users/ckoupoh/Documents/FISEC-DPME/Extraction Tableau/excel/situation financiere_data 2020.xlsx")
@@ -336,15 +349,17 @@ if st.session_state.fichiers_traites:
     # #
     if st.button("Enregistrer"):
 
-        maintenant = datetime.now()
-        maintenant = str(maintenant).replace(".", "_")
-        maintenant = str(maintenant).replace(":", "_")
-        df_updated.to_excel("./Extraction Tableau/excel/df_updated_"+str(maintenant)+".xlsx", index=False )
-        
-        st.write("Fichier enregistré : Output_"+str(maintenant))
+        # Enregistrer toujours sous le même nom
+        st.session_state.df_updated.to_excel(
+            FICHIER_CUMULATIF,
+            index=False
+        )
+    
+        st.success(
+            "Données enregistrées dans : "
+            + FICHIER_CUMULATIF
+        )
 
-# st.download_button(
-#     label="📥 Télécharger les données en excel",
-#     data=df_updated,
-#     file_name="mes_donnees.xlsx",
-#     mime="text/xlsx")        
+        
+
+   
