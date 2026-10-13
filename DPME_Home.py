@@ -35,7 +35,7 @@ def load_csv(path):
     
 
 #C:\Users\ckoupoh\Documents\FISEC-DPME\Extraction Tableau
-df_2019 = load_data('E:/FISEC-DPME/Extraction Tableau/excel/UEMOA/situation financiere_data_2019.xlsx')
+df_2019 = load_data('./Extraction Tableau/excel/UEMOA/situation financiere_data_2019.xlsx')
 df_2019["New_Arrete"] = pd.to_datetime( df_2019["Arrete"], dayfirst=True, errors="coerce")
 
 # df_2020 = load_data("C:/Users/ckoupoh/Documents/FISEC-DPME/Extraction Tableau/excel/situation financiere_data 2020.xlsx")
@@ -339,7 +339,7 @@ if st.session_state.fichiers_traites:
         maintenant = datetime.now()
         maintenant = str(maintenant).replace(".", "_")
         maintenant = str(maintenant).replace(":", "_")
-        df_updated.to_excel("C:/Users/ckoupoh/Documents/FISEC-DPME/Extraction Tableau/excel/df_updated_"+str(maintenant)+".xlsx", index=False )
+        df_updated.to_excel("./Extraction Tableau/excel/df_updated_"+str(maintenant)+".xlsx", index=False )
         
         st.write("Fichier enregistré : Output_"+str(maintenant))
 
