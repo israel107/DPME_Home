@@ -13,7 +13,7 @@ pd.set_option("styler.render.max_elements", 2174640)
 
 st.set_page_config(page_title="DPME", page_icon="📈", layout="wide")
 st.markdown("<h2 style='text-align: left; font-size: 40px;  font-weight: bold;'>Tableau de bord du DPME</h2>", unsafe_allow_html=True)
-st.image("E:/FISEC-DPME/pays_uemoa_png.png", caption="", use_container_width=False)
+st.image("./pays_uemoa_png.png", caption="", use_container_width=False)
 st.markdown("_DABFA-SFE v0.0.1_")
 
 # -------------------------------
