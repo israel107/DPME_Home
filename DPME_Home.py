@@ -70,7 +70,7 @@ with st.sidebar:
     # m_period_DPME = st.selectbox('Périodes DPME', ['juin 2021','déc 2021','juin 2022','déc 2022','juin 2023','déc 2023','juin 2024','déc 2024'], 0)
     v_annee = st.slider("Années", 2018, 2026, 2022)
     m_mois = st.selectbox('Mois', all_mois, 0)
-    multi_pays = st.multiselect('Select instrument (chart line)', all_pays, ['Bénin',"Burkina Faso"])
+    # multi_pays = st.multiselect('Select instrument (chart line)', all_pays, ['Bénin',"Burkina Faso"])
     m_bank = st.selectbox('Banques', list_bank, 0)
     m_poste = st.selectbox('Postes', all_poste, 0)
 
