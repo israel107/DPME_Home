@@ -41,7 +41,7 @@ FICHIER_INITIAL = (
 FICHIER_CUMULATIF = "./data/situation_financiere.xlsx"
 
 # Créer le dossier s'il n'existe pas
-os.makedirs("./unique", exist_ok=True)
+# os.makedirs("./unique", exist_ok=True)
 
 # Charger le fichier cumulatif s'il existe,
 # sinon charger le fichier initial
