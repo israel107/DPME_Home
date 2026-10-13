@@ -20,7 +20,7 @@ st.markdown("_DABFA-SFE v0.0.1_")
 # CSS Sheet
 # -------------------------------
 
-with open("style.css") as f:
+with open("./style.css") as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html= True)
 
 @st.cache_data
@@ -126,7 +126,7 @@ tx_benef_fr = f"{tx_credit_UEMOA:,.2f}%".replace(",", ".")
 PME_niv_pays = f"{credit_pays:,.0f}".replace(",", ".")
 tx_accomp_fr = f"{tx_credit_pays:,.2f}%".replace(",", ".")
 
-with st.expander("##### CREDIT AUX PME (en Millions FCFA)"): #+m_pays+" en "+ m_period_DPME
+with st.expander("CREDIT AUX PME (en Millions FCFA)"): 
 
     valeur1, valeur2, valeur3 = st.columns(3, gap='small')
 
