@@ -153,7 +153,7 @@ with st.expander("CREDIT AUX PME (en Millions FCFA)"):
 # -----------------------------------------------------------------------------------------------------------------------------------
 # 2 CHARTS : Financement / Pays - 
 # -----------------------------------------------------------------------------------------------------------------------------------
-
+st.write("Taille du Tableau: " +str(len(df_2019)))
 st.markdown('#### GRAPHIQUES')
 
 BC_colors =['rgb(133, 32, 12)', 'rgb(194, 72, 48)', 'rgb(228, 185, 176)']
@@ -169,7 +169,7 @@ with valeur1:
     st.plotly_chart(fig_line, width='stretch')
 
 with valeur2:
-    fig_cercle = ch.chart_pie(all_pays, split_credit, BC_colors , m_hole=.3, m_size_font=16, m_titre='Crédit aux PME par pays en '+ m_mois +" 2019")
+    fig_cercle = ch.chart_pie(all_pays, split_credit, BC_colors , m_hole=.3, m_size_font=16, m_titre='Crédit aux PME (en Mns FCFA) par pays en '+ m_mois +" 2019")
     st.plotly_chart(fig_cercle, width='stretch')
 
 # -----------------------------------------------------------------------------------------------------------------------------------
