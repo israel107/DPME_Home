@@ -153,7 +153,7 @@ with st.expander("CREDIT AUX PME (en Millions FCFA)"):
 # -----------------------------------------------------------------------------------------------------------------------------------
 # 2 CHARTS : Financement / Pays - 
 # -----------------------------------------------------------------------------------------------------------------------------------
-st.write("Taille des données: " +str(len(df_2019))+ " lignes"))
+st.write("Taille des données: " +str(len(df_2019))+ " lignes")
 st.markdown('#### GRAPHIQUES')
 
 BC_colors =['rgb(133, 32, 12)', 'rgb(194, 72, 48)', 'rgb(228, 185, 176)']
