@@ -130,7 +130,7 @@ def scatterMultiSelect(m_X, m_list,df,  grd_titre, y_title):
 def credit_par_mois(m_X, m_Y, grd_titre ,y_title,  m_col1='rgb(133, 32, 12)'):
     fig = go.Figure()
     
-    fig.add_trace( go.Scatter( x= m_X, y=m_Y, mode='lines+markers+text', text=m_Y, textposition='bottom left' , marker_color=m_col1))
+    fig.add_trace( go.Scatter( x= m_X, y=m_Y, mode='lines+markers+text' , marker_color=m_col1))
 
     fig.update_layout(
             title= {
